@@ -1,5 +1,7 @@
+import List from "../src/components/List/index"
+
 export default function Home() {
   return (
-    <><p>Hello world</p></>
+    <><List>Hello world</List></>
   )
 }
