@@ -1,9 +1,9 @@
 import { useState } from "react"
-import axios from "axios";
+import axios from "axios"
 
 export default function List() {
-  const [pokemonData, setPokemonData] = useState();
-  const [pokemonName, setPokemonName] = useState()
+  const [pokemonData, setPokemonData] = useState("")
+  const [pokemonName, setPokemonName] = useState("")
   const apiPokemon = "https://pokeapi.co/api/v2/pokemon/" + pokemonName
 
   function getPokemon() {
