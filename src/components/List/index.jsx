@@ -28,6 +28,7 @@ export default function List() {
         <form onSubmit={handleSubmit}>
           <input type="text" onChange={(e) => setPokemonName(e.target.value)}/>
           <button>Search</button>
+          <p>lorem</p>
         </form>
       </div>
       <div>
