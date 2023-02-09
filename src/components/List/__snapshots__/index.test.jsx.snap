@@ -11,6 +11,9 @@ exports[`renders homepage unchanged 1`] = `
         <button>
           Search
         </button>
+        <p>
+          lorem
+        </p>
       </form>
     </div>
     <div>
