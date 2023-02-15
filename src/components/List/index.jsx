@@ -28,11 +28,17 @@ export default function List() {
         <form onSubmit={handleSubmit}>
           <input type="text" onChange={(e) => setPokemonName(e.target.value)}/>
           <button>Search</button>
-          <p>lorem</p>
         </form>
       </div>
       <div>
-        <ul>{pokemonData ? <li>{pokemonData.name}</li> : <li>Escreva o nome do seu pokemon</li>}</ul>
+        <ul>
+          {pokemonData ?
+            <li>
+              <p>{pokemonData.name}</p>
+              <img src={pokemonData.sprites.front_default} alt="" width={100} height={100}/>
+            </li> : <li>Escreva o nome do seu pokemon</li>
+          }
+        </ul>
       </div>
     </div>
   )
