@@ -16,17 +16,22 @@ export default function List() {
     .catch(error => console.log(error))
   }
 
+  function clearInputpokemon() {
+    setPokemonName("")
+  }
+
   function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
 
     getPokemon()
+    clearInputpokemon()
   }
 
   return(
     <div>
       <div>
         <form onSubmit={handleSubmit}>
-          <input type="text" onChange={(e) => setPokemonName(e.target.value)}/>
+          <input type="text" value={pokemonName} onChange={(e) => setPokemonName(e.target.value)}/>
           <button>Search</button>
         </form>
       </div>
@@ -34,8 +39,26 @@ export default function List() {
         <ul>
           {pokemonData ?
             <li>
-              <p>{pokemonData.name}</p>
-              <img src={pokemonData.sprites.front_default} alt="" width={100} height={100}/>
+              <div>
+                <h1>{pokemonData.name}</h1>
+              </div>
+              <div>
+                <img src={pokemonData.sprites.front_default} alt="" width={100} height={100}/>
+              </div>
+              <div>
+                <p>Primary skill: {pokemonData.abilities[0].ability.name}</p>
+                {pokemonData.abilities[1].ability.name ? <p>Secondary skill: {pokemonData.abilities[1].ability.name}</p>
+                 : <p>no secondary skill</p>
+                }
+              </div>
+              <div>
+                <p>{pokemonData.stats[0].stat.name}: {pokemonData.stats[0].base_stat}</p>
+                <p>{pokemonData.stats[1].stat.name}: {pokemonData.stats[1].base_stat}</p>
+                <p>{pokemonData.stats[2].stat.name}: {pokemonData.stats[2].base_stat}</p>
+                <p>{pokemonData.stats[3].stat.name}: {pokemonData.stats[3].base_stat}</p>
+                <p>{pokemonData.stats[4].stat.name}: {pokemonData.stats[4].base_stat}</p>
+                <p>{pokemonData.stats[5].stat.name}: {pokemonData.stats[5].base_stat}</p>
+              </div>
             </li> : <li>Escreva o nome do seu pokemon</li>
           }
         </ul>
