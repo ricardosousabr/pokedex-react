@@ -1,5 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
+import {Container} from "./styles"
 
 export default function List() {
   const [pokemonData, setPokemonData] = useState("")
@@ -29,6 +30,9 @@ export default function List() {
 
   return(
     <div>
+      <Container>
+        <h1>Pokedex</h1>
+      </Container>
       <div>
         <form onSubmit={handleSubmit}>
           <input type="text" value={pokemonName} onChange={(e) => setPokemonName(e.target.value)}/>
@@ -40,7 +44,7 @@ export default function List() {
           {pokemonData ?
             <li>
               <div>
-                <h1>{pokemonData.name}</h1>
+                <h2>{pokemonData.name}</h2>
               </div>
               <div>
                 <img src={pokemonData.sprites.front_default} alt="" width={100} height={100}/>
