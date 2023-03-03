@@ -2,10 +2,18 @@
 
 exports[`renders homepage unchanged 1`] = `
 <div>
-  <div>
+  <div
+    class="styles__Container-sc-1n5v01k-0 eLIhEp"
+  >
+    <div>
+      <h1>
+        Pokedex
+      </h1>
+    </div>
     <div>
       <form>
         <input
+          placeholder="Digite o nome do pokemon"
           type="text"
           value=""
         />

@@ -18,7 +18,7 @@ export default function List() {
   }
 
   function clearInputpokemon() {
-    setPokemonName("")
+    setPokemonName("w")
   }
 
   function handleSubmit(e) {
@@ -29,13 +29,13 @@ export default function List() {
   }
 
   return(
-    <div>
-      <Container>
+    <Container>
+      <div>
         <h1>Pokedex</h1>
-      </Container>
+      </div>
       <div>
         <form onSubmit={handleSubmit}>
-          <input type="text" value={pokemonName} onChange={(e) => setPokemonName(e.target.value)}/>
+          <input placeholder="Digite o nome do pokemon" type="text" value={pokemonName} onChange={(e) => setPokemonName(e.target.value)}/>
           <button>Search</button>
         </form>
       </div>
@@ -67,6 +67,9 @@ export default function List() {
           }
         </ul>
       </div>
-    </div>
+    </Container>
   )
+
+  module.exports = getPokemon;
+  module.exports = clearInputpokemon
 }
