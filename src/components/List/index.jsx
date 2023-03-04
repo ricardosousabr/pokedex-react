@@ -1,75 +1,156 @@
-import { useState } from "react"
-import axios from "axios"
-import {Container} from "./styles"
-
+import { useState } from "react";
+import axios from "axios";
+import {
+  Container,
+  Title,
+  InformationPokemon,
+  NamePoke,
+  ItemList,
+  Button,
+  SearchInput,
+  BoxSearch,
+  BarStatus,
+} from "./styles";
+import  ProgressBar from "../ProgressBar/index"
 export default function List() {
-  const [pokemonData, setPokemonData] = useState("")
-  const [pokemonName, setPokemonName] = useState("")
-  const apiPokemon = "https://pokeapi.co/api/v2/pokemon/" + pokemonName
+  const [pokemonData, setPokemonData] = useState("");
+  const [pokemonName, setPokemonName] = useState("");
+  const apiPokemon = "https://pokeapi.co/api/v2/pokemon/" + pokemonName;
 
   function getPokemon() {
-
-    axios.get(apiPokemon)
-    .then(response => {
-      setPokemonData(response.data)
-      console.log(response.data)
-    })
-    .catch(error => console.log(error))
+    axios
+      .get(apiPokemon)
+      .then((response) => {
+        setPokemonData(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => console.log(error));
   }
 
   function clearInputpokemon() {
-    setPokemonName("w")
+    setPokemonName("w");
   }
 
   function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
 
-    getPokemon()
-    clearInputpokemon()
+    getPokemon();
+    clearInputpokemon();
   }
 
-  return(
+  return (
     <Container>
       <div>
-        <h1>Pokedex</h1>
+        <Title>Pokedex</Title>
+        <ProgressBar value="44"/>
       </div>
       <div>
-        <form onSubmit={handleSubmit}>
-          <input placeholder="Digite o nome do pokemon" type="text" value={pokemonName} onChange={(e) => setPokemonName(e.target.value)}/>
-          <button>Search</button>
-        </form>
+        <BoxSearch onSubmit={handleSubmit}>
+          <SearchInput
+            placeholder="Digite o nome do pokemon"
+            type="text"
+            value={pokemonName}
+            onChange={(e) => setPokemonName(e.target.value)}
+          />
+          <Button>Search</Button>
+        </BoxSearch>
       </div>
-      <div>
+      <InformationPokemon>
         <ul>
-          {pokemonData ?
-            <li>
+          {pokemonData ? (
+            <ItemList>
               <div>
-                <h2>{pokemonData.name}</h2>
+                <NamePoke>{pokemonData.name}</NamePoke>
               </div>
               <div>
-                <img src={pokemonData.sprites.front_default} alt="" width={100} height={100}/>
+                <img
+                  src={pokemonData.sprites.front_default}
+                  alt=""
+                  width={100}
+                  height={100}
+                />
               </div>
               <div>
                 <p>Primary skill: {pokemonData.abilities[0].ability.name}</p>
-                {pokemonData.abilities[1].ability.name ? <p>Secondary skill: {pokemonData.abilities[1].ability.name}</p>
-                 : <p>no secondary skill</p>
-                }
+                {pokemonData.abilities[1].ability.name ? (
+                  <p>
+                    Secondary skill: {pokemonData.abilities[1].ability.name}
+                  </p>
+                ) : (
+                  <p>no secondary skill</p>
+                )}
               </div>
               <div>
-                <p>{pokemonData.stats[0].stat.name}: {pokemonData.stats[0].base_stat}</p>
-                <p>{pokemonData.stats[1].stat.name}: {pokemonData.stats[1].base_stat}</p>
-                <p>{pokemonData.stats[2].stat.name}: {pokemonData.stats[2].base_stat}</p>
-                <p>{pokemonData.stats[3].stat.name}: {pokemonData.stats[3].base_stat}</p>
-                <p>{pokemonData.stats[4].stat.name}: {pokemonData.stats[4].base_stat}</p>
-                <p>{pokemonData.stats[5].stat.name}: {pokemonData.stats[5].base_stat}</p>
+                <div>
+                  <p>
+                    {pokemonData.stats[0].stat.name}:{" "}
+                    {pokemonData.stats[0].base_stat}
+                  </p>
+                  <BarStatus id="file" value={pokemonData.stats[0].base_stat} max="100">
+                    {" "}
+                    32%{" "}
+                  </BarStatus>
+                </div>
+                <div>
+                  <p>
+                    {pokemonData.stats[1].stat.name}:{" "}
+                    {pokemonData.stats[1].base_stat}
+                  </p>
+                  <progress id="file" value={pokemonData.stats[1].base_stat} max="100">
+                    {" "}
+                    32%{" "}
+                  </progress>
+                </div>
+                <div>
+                  <p>
+                    {pokemonData.stats[2].stat.name}:{" "}
+                    {pokemonData.stats[2].base_stat}
+                  </p>
+                  <progress id="file" value={pokemonData.stats[2].base_stat} max="100">
+                    {" "}
+                    32%{" "}
+                  </progress>
+                </div>
+                <div>
+                  <p>
+                    {pokemonData.stats[3].stat.name}:{" "}
+                    {pokemonData.stats[3].base_stat}
+                  </p>
+                  <progress id="file" value={pokemonData.stats[3].base_stat} max="100">
+                    {" "}
+                    32%{" "}
+                  </progress>
+                </div>
+                <div>
+                  <p>
+                    {pokemonData.stats[4].stat.name}:{" "}
+                    {pokemonData.stats[4].base_stat}
+                  </p>
+                  <progress id="file" value={pokemonData.stats[4].base_stat} max="100">
+                    {" "}
+                    32%{" "}
+                  </progress>
+                </div>
+                <div>
+                  <p>
+                    {pokemonData.stats[5].stat.name}:{" "}
+                    {pokemonData.stats[5].base_stat}
+                  </p>
+                  <progress id="file" value={pokemonData.stats[5].base_stat} max="100">
+                    {" "}
+                    32%{" "}
+                  </progress>
+                </div>
               </div>
-            </li> : <li>Escreva o nome do seu pokemon</li>
-          }
+            </ItemList>
+          ) : (
+            <li>Escreva o nome do seu pokemon</li>
+          )}
         </ul>
-      </div>
+      </InformationPokemon>
     </Container>
-  )
+  );
 
   module.exports = getPokemon;
-  module.exports = clearInputpokemon
+  module.exports = clearInputpokemon;
 }
