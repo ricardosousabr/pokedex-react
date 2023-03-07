@@ -1,7 +1,7 @@
-import List from "../src/components/List/index"
+import Search from "../src/components/Search/index"
 
 export default function Home() {
   return (
-    <><List>Hello world</List></>
+    <><Search>Hello world</Search></>
   )
 }
