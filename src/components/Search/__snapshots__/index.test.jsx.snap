@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <div
+    class="styles__Container-sc-1mac1tm-0 eOcjop"
+  >
+    <div>
+      <h1
+        class="styles__Title-sc-1mac1tm-1 gEFbnO"
+      >
+        Pokedex
+      </h1>
+      <progress
+        class="styles__BarStatus-sc-1e9ujot-0 bqgsNL"
+        max="100"
+        value="44"
+      />
+    </div>
+    <div>
+      <form
+        class="styles__BoxSearch-sc-1mac1tm-6 gqGeUh"
+      >
+        <input
+          class="styles__SearchInput-sc-1mac1tm-7 lkcxiU"
+          placeholder="Digite o nome do pokemon"
+          type="text"
+          value=""
+        />
+        <button
+          class="styles__Button-sc-1mac1tm-5 gJPOZY"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+    <div
+      class="styles__InformationPokemon-sc-1mac1tm-4 fRXnQC"
+    >
+      <ul>
+        <li>
+          Escreva o nome do seu pokemon
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
