@@ -3,39 +3,34 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
-    class="styles__Container-sc-1mac1tm-0 eOcjop"
+    class="styles__Container-sc-dxxv4y-0 gGfPao"
   >
     <div>
       <h1
-        class="styles__Title-sc-1mac1tm-1 gEFbnO"
+        class="styles__Title-sc-dxxv4y-1 lDDA-D"
       >
         Pokedex
       </h1>
-      <progress
-        class="styles__BarStatus-sc-1e9ujot-0 bqgsNL"
-        max="100"
-        value="44"
-      />
     </div>
     <div>
       <form
-        class="styles__BoxSearch-sc-1mac1tm-6 gqGeUh"
+        class="styles__BoxSearch-sc-dxxv4y-6 fMIabc"
       >
         <input
-          class="styles__SearchInput-sc-1mac1tm-7 lkcxiU"
+          class="styles__SearchInput-sc-dxxv4y-7 jeFkKh"
           placeholder="Digite o nome do pokemon"
           type="text"
           value=""
         />
         <button
-          class="styles__Button-sc-1mac1tm-5 gJPOZY"
+          class="styles__Button-sc-dxxv4y-5 hfRWGN"
         >
           Search
         </button>
       </form>
     </div>
     <div
-      class="styles__InformationPokemon-sc-1mac1tm-4 fRXnQC"
+      class="styles__InformationPokemon-sc-dxxv4y-4 fCBCKn"
     >
       <ul>
         <li>
