@@ -1,10 +1,5 @@
-import { BarStatus } from './styles'
+import { BarStatus } from "./styles";
 
-export default function ProgressBar({value}) {
-
-  console.log(value)
-
-  return (
-    <BarStatus value={value} max="100" />
-  );
+export default function ProgressBar({ value }) {
+  return <BarStatus value={value} max="100" />;
 }

@@ -9,32 +9,36 @@ export const Container = styled.div`
   height: 100vh;
 `;
 
-export const Title = styled.h1`
- color: white;
- padding-bottom: 35px;
+export const ContainerImage = styled.div`
+  margin-bottom: 100px;
+`;
+
+export const ContainerForm = styled.div`
+  margin-bottom: 50px;
+`;
+export const ContainerPokemon = styled.div`
+  margin-bottom: 50px;
 `;
 
 export const NamePoke = styled.h2`
- color: white;
- padding: 35px 0;
- text-align: center;
+  padding: 35px 0;
+  text-align: center;
 `;
 
-export const ItemList = styled.li`
+export const ListSkils = styled.ul`
   list-style: none;
 `;
 
-export const InformationPokemon = styled.div`
-  color: white;
-`;
-
 export const Button = styled.button`
-  background: #6f6799;
+  background: #434343;
   color: white;
-  width: 90px;
-  border: none;
-  height: 30px;
-  border-radius: 14px;
+  width: 100px;
+  height: 35px;
+  border-top: 1px solid #010201;
+  border-right: 1px solid #010201;
+  border-left: 4px solid #010201;
+  border-bottom: 4px solid #010201;
+  border-radius: 4px;
 `;
 
 export const BoxSearch = styled.form`
@@ -42,32 +46,24 @@ export const BoxSearch = styled.form`
   align-items: center;
   justify-content: space-around;
   width: 350px;
-
 `;
 
 export const SearchInput = styled.input`
   width: 200px;
   height: 30px;
-  color: white;
   background: transparent;
   border-top: none;
   border-right: none;
   border-left: none;
   border-bottom: 1px solid;
+  ::placeholder {
+    color: black;
+  }
   :focus {
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: 1px solid;
     outline: 0;
-  }
-`;
-
-export const BarStatus = styled.progress`
-  height: 10px;
-  border-radius: 10px;
-
-  ::-webkit-progress-value {
-    background-color: red;
   }
 `;

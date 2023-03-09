@@ -1,12 +1,11 @@
 import PokeState from "../PokeState";
+import { Container } from "./styles";
 
 export default function States({ statesPokemon }) {
-  console.log(statesPokemon.stats);
-
   const statesPoke = statesPokemon.stats;
 
   return (
-    <div>
+    <Container>
       <div>
         <p>Primary skill: {statesPokemon.abilities[0].ability.name}</p>
         {statesPokemon.abilities[1].ability.name ? (
@@ -20,6 +19,6 @@ export default function States({ statesPokemon }) {
           <PokeState stateName={stat.name} stateValue={base_stat} />
         ))}
       </div>
-    </div>
+    </Container>
   );
 }

@@ -3,41 +3,48 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
-    class="styles__Container-sc-1mac1tm-0 eOcjop"
+    class="styles__Container-sc-dxxv4y-0 gGfPao"
   >
-    <div>
-      <h1
-        class="styles__Title-sc-1mac1tm-1 gEFbnO"
-      >
-        Pokedex
-      </h1>
-      <progress
-        class="styles__BarStatus-sc-1e9ujot-0 bqgsNL"
-        max="100"
-        value="44"
+    <div
+      class="styles__ContainerImage-sc-dxxv4y-1 eSUxBk"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="200"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg%2Fpokemon-logo.png&w=828&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fpokemon-logo.png&w=640&q=75 1x, /_next/image?url=%2Fimg%2Fpokemon-logo.png&w=828&q=75 2x"
+        style="color: transparent;"
+        width="400"
       />
     </div>
-    <div>
+    <div
+      class="styles__ContainerForm-sc-dxxv4y-2 gKIHLC"
+    >
       <form
-        class="styles__BoxSearch-sc-1mac1tm-6 gqGeUh"
+        class="styles__BoxSearch-sc-dxxv4y-7 glGlCx"
       >
         <input
-          class="styles__SearchInput-sc-1mac1tm-7 lkcxiU"
+          class="styles__SearchInput-sc-dxxv4y-8 gFjLP"
           placeholder="Digite o nome do pokemon"
           type="text"
           value=""
         />
         <button
-          class="styles__Button-sc-1mac1tm-5 gJPOZY"
+          class="styles__Button-sc-dxxv4y-6 isOtJA"
         >
           Search
         </button>
       </form>
     </div>
     <div
-      class="styles__InformationPokemon-sc-1mac1tm-4 fRXnQC"
+      class="styles__ContainerPokemon-sc-dxxv4y-3 clmjgs"
     >
-      <ul>
+      <ul
+        class="styles__ListSkils-sc-dxxv4y-5 epXqgX"
+      >
         <li>
           Escreva o nome do seu pokemon
         </li>
