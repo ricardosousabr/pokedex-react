@@ -18,7 +18,11 @@ export default function States({ statesPokemon }) {
       </div>
       <div>
         {statesPoke.map(({ base_stat, stat }) => (
-          <PokeState stateName={stat.name} stateValue={base_stat} />
+          <PokeState
+            key="satespoke"
+            stateName={stat.name}
+            stateValue={base_stat}
+          />
         ))}
       </div>
     </Container>
