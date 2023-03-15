@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <div>
+    <p>
+      :
+    </p>
+    <progress
+      class="styles__BarStatus-sc-1e9ujot-0 eKRLMZ"
+      max="100"
+    />
+  </div>
+</div>
+`;

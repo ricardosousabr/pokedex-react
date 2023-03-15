@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <div
+    class="styles__Container-sc-1p1aihv-0 SCoIR"
+  >
+    <div>
+      <p>
+        Primary skill: 
+        static
+      </p>
+      <p>
+        Secondary skill: 
+        tttt
+      </p>
+    </div>
+    <div>
+      <div>
+        <p>
+          hp
+          :
+          35
+        </p>
+        <progress
+          class="styles__BarStatus-sc-1e9ujot-0 eKRLMZ"
+          max="100"
+          value="35"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
