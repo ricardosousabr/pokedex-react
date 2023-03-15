@@ -66,8 +66,8 @@ export default function Search() {
                 <img
                   src={pokemonData.sprites.front_default}
                   alt=""
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={200}
                 />
               </div>
               <div>
