@@ -4,9 +4,9 @@
 
 import React from "react";
 import { render } from "@testing-library/react";
-import Search from "./index";
+import BarStatus from "./index";
 
 it("renders homepage unchanged", () => {
-  const { container } = render(<Search />);
+  const { container } = render(<BarStatus />);
   expect(container).toMatchSnapshot();
 });

@@ -5,6 +5,6 @@ export const BarStatus = styled.progress`
   border-radius: 10px;
 
   ::-webkit-progress-value {
-    background-color: red;
+    background-color: #85c127;
   }
 `;

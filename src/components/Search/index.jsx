@@ -1,16 +1,18 @@
 import { useState } from "react";
 import axios from "axios";
+import Image from "next/image";
 import {
   Container,
-  Title,
-  InformationPokemon,
+  ContainerImage,
+  ContainerForm,
+  ContainerPokemon,
   NamePoke,
-  ItemList,
+  ListSkils,
   Button,
   SearchInput,
   BoxSearch,
-  BarStatus,
 } from "./styles";
+
 import States from "../States/index";
 export default function Search() {
   const [pokemonData, setPokemonData] = useState("");
@@ -22,7 +24,6 @@ export default function Search() {
       .get(apiPokemon)
       .then((response) => {
         setPokemonData(response.data);
-        console.log(response.data);
       })
       .catch((error) => console.log(error));
   }
@@ -40,10 +41,10 @@ export default function Search() {
 
   return (
     <Container>
-      <div>
-        <Title>Pokedex</Title>
-      </div>
-      <div>
+      <ContainerImage>
+        <Image src="/img/pokemon-logo.png" alt="" width={400} height={200} />
+      </ContainerImage>
+      <ContainerForm>
         <BoxSearch onSubmit={handleSubmit}>
           <SearchInput
             placeholder="Digite o nome do pokemon"
@@ -51,13 +52,13 @@ export default function Search() {
             value={pokemonName}
             onChange={(e) => setPokemonName(e.target.value)}
           />
-          <Button>Search</Button>
+          <Button>Procurar</Button>
         </BoxSearch>
-      </div>
-      <InformationPokemon>
-        <ul>
+      </ContainerForm>
+      <ContainerPokemon>
+        <ListSkils>
           {pokemonData ? (
-            <ItemList>
+            <li>
               <div>
                 <NamePoke>{pokemonData.name}</NamePoke>
               </div>
@@ -65,22 +66,19 @@ export default function Search() {
                 <img
                   src={pokemonData.sprites.front_default}
                   alt=""
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={200}
                 />
               </div>
               <div>
                 <States statesPokemon={pokemonData} />
               </div>
-            </ItemList>
+            </li>
           ) : (
             <li>Escreva o nome do seu pokemon</li>
           )}
-        </ul>
-      </InformationPokemon>
+        </ListSkils>
+      </ContainerPokemon>
     </Container>
   );
-
-  module.exports = getPokemon;
-  module.exports = clearInputpokemon;
 }

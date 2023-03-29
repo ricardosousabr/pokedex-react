@@ -8,5 +8,6 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background: #191621;
+  background: url(/img/background_pokemon.jpg) no-repeat center center;
+  background-size: cover;
 }

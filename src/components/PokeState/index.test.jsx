@@ -4,9 +4,9 @@
 
 import React from "react";
 import { render } from "@testing-library/react";
-import Search from "./index";
+import PokeState from "./index";
 
 it("renders homepage unchanged", () => {
-  const { container } = render(<Search />);
+  const { container } = render(<PokeState />);
   expect(container).toMatchSnapshot();
 });

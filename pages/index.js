@@ -1,7 +1,5 @@
-import Search from "../src/components/Search/index"
+import Search from "../src/components/Search/index";
 
 export default function Home() {
-  return (
-    <><Search>Hello world</Search></>
-  )
+  return <Search>Hello world</Search>;
 }
