@@ -52,7 +52,7 @@ export default function Search() {
             value={pokemonName}
             onChange={(e) => setPokemonName(e.target.value)}
           />
-          <Button>Search</Button>
+          <Button>Procurar</Button>
         </BoxSearch>
       </ContainerForm>
       <ContainerPokemon>

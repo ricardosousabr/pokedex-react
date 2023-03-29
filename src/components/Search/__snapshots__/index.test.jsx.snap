@@ -35,7 +35,7 @@ exports[`renders homepage unchanged 1`] = `
         <button
           class="styles__Button-sc-dxxv4y-6 isOtJA"
         >
-          Search
+          Procurar
         </button>
       </form>
     </div>
