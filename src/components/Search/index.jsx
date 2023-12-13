@@ -42,7 +42,7 @@ export default function Search() {
   return (
     <Container>
       <ContainerImage>
-        <Image src="/img/pokemon-logo.png" alt="" width={400} height={200} />
+        <Image src="./img/pokemon-logo.png" alt="" width={400} height={200} />
       </ContainerImage>
       <ContainerForm>
         <BoxSearch onSubmit={handleSubmit}>
